@@ -1,0 +1,5 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: onnx in /home/shicong/.local/lib/python3.8/site-packages (1.11.0)
+Requirement already satisfied: numpy>=1.16.6 in /home/shicong/.local/lib/python3.8/site-packages (from onnx) (1.24.4)
+Requirement already satisfied: protobuf>=3.12.2 in /home/shicong/anaconda3/envs/torch/lib/python3.8/site-packages (from onnx) (3.20.0)
+Requirement already satisfied: typing-extensions>=3.6.2.1 in /home/shicong/anaconda3/envs/torch/lib/python3.8/site-packages (from onnx) (4.9.0)

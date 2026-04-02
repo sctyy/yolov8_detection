@@ -1,0 +1,37 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# COCO8 dataset (first 8 images from COCO train2017) by Ultralytics
+# Documentation: https://docs.ultralytics.com/datasets/detect/coco8/
+# Example usage: yolo train data=coco8.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── coco8  ← downloads here (1 MB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /mnt/d/验布机数据集/data6/train # dataset root dir
+train: /mnt/d/验布机数据集/data6/train/train.txt # train images (relative to 'path') 4 images
+val: /mnt/d/验布机数据集/data6/train/test.txt # val images (relative to 'path') 4 images
+test: /mnt/d/验布机数据集/data6/train/test.txt   # test images (optional)
+
+# Classes
+names:
+  0: 飞花
+  1: 纱结
+  2: 粗细纱
+  3: 坏针
+  4: 竖条
+  5: 横条
+  6: 油污
+  7: 破洞
+  8: 烂边
+  9: 异纤
+  10: 断纱
+  11: 勾纱
+  12: 折痕
+  13: 反丝
+  14: 缝头线
+  15: 异色
+  16: 其他
+
+augmentations:
+  resize_method: 'resize'
