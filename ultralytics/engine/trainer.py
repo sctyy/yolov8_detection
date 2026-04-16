@@ -378,7 +378,9 @@ class BaseTrainer:
                 with autocast(self.amp):
                     batch = self.preprocess_batch(batch)
                     from torchvision.utils import save_image
-                    save_image(batch['img'][0], '/mnt/d/验布机数据集/data6/train/v2_resize/output.png')
+                    save_image(batch['img'][0], '/mnt/d/数据集/output.png')
+                    # print(batch['img'].shape)  # [B, C, H, W]
+                    # print(batch['img'][0].shape)  # [C, H, W]
                     self.loss, self.loss_items = self.model(batch)
                     if RANK != -1:
                         self.loss *= world_size

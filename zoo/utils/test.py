@@ -14,12 +14,12 @@ from config import yolov8_yanbuji_mapping, label_yanbuji_color, labels_circle_ma
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-IMG_SIZE = (672, 1024)
+IMG_SIZE = (384, 768)
 CONF_THRES = 0.35
 IOU_THRES = 0.45
-MODEL_PATH = r'/mnt/c/Users/29656/Desktop/yolovs_all_v5_20260401.pt'  # 模型路径
-IMAGE_PATH = r'/mnt/share/标注数据/色织汗布/数据组数据/盒子14/每日误报/1号机色织误报3.31/误报'  # 测试图片路径
-SAVE_PATH = r'/mnt/share/标注数据/色织汗布/数据组数据/盒子14/每日误报/1号机色织误报3.31/output'   # 结果保存
+MODEL_PATH = r'/mnt/c/Users/29656/Desktop/last.pt'  # 模型路径
+IMAGE_PATH = r'/mnt/c/Users/29656/Desktop/test/data2'  # 测试图片路径
+SAVE_PATH = r'/mnt/c/Users/29656/Desktop/test/output2'   # 结果保存
 RESIZE_MODE = 'resize'         # 数据预处理方法，可以选择 'resize' 或 'letterbox'
 
 id2name = {v: k for k, v in yolov8_yanbuji_mapping.items()}  # 类别名称
@@ -216,7 +216,7 @@ def save_detection_result(image_path: str, pred_tensor=None, save_path: str = No
 
 def main():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    ckpt = torch.load(MODEL_PATH, map_location=device)
+    ckpt = torch.load(MODEL_PATH, map_location=device, weights_only=False)
     model = ckpt.get('ema') or ckpt.get('model')
     model.float().eval()
     for root, dirs, files in os.walk(IMAGE_PATH):

@@ -14,8 +14,8 @@ import numpy as np
 # input_folder = '/data/data_team/share/算法组训练数据库/all/data/罗纹/jsons/'#json文件地址
 # output_folder = '/home/tny/workspace/tnysegnet/datasets/罗纹/'#转换后保存地址
 
-input_dir = '/mnt/share/数据整理/小盒子全布种v5/训练数据/jsons'
-output_dir = '/mnt/share/数据整理/小盒子全布种v5/训练数据/labels'
+input_dir = '/mnt/share/数据整理/saas默认v6/训练数据/jsons'
+output_dir = '/mnt/share/数据整理/saas默认v6/训练数据/labels'
 buzhong = ['汗布']
 # buzhong = ['汗布', '罗纹', '特别布', '粗针罗纹', '粗针华夫格', '粗针汗布', '粗针竹节', '网眼布', '单面人字纹', '华夫格', '空气层', '楼梯布', '罗马布', '罗纹小提花', '罗纹小提花华夫格', '棉毛', '三线卫衣', '色织汗布', '色织空气层',
 #            '色织-罗纹', '色织圈圈纱', '色织双面仿仿罗纹', '色织条', '色织小提花', '色织小循环', '小毛圈', '小提花', '斜纹布', '直条布', '皱皱布']

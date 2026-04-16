@@ -1605,11 +1605,7 @@ class LetterBox:
         """
 
         ################# RESIZE ###############
-        new_shape[1], new_shape[0] = 1024, 512
-        new_shape = list(new_shape)
-        new_shape[0] = 512  # H
-        new_shape[1] = 1024  # W
-        new_shape = tuple(new_shape)
+        new_shape = (512, 1024)
         img = cv2.resize(img, (new_shape[1], new_shape[0]), interpolation=cv2.INTER_LINEAR)
         ratio = (new_shape[1] / shape[1], new_shape[0] / shape[0])
         dw, dh = 0, 0
@@ -2384,6 +2380,7 @@ def v8_transforms(dataset, imgsz, hyp, stretch=False):
             RandomHSV(hgain=hyp.hsv_h, sgain=hyp.hsv_s, vgain=hyp.hsv_v),
             RandomFlip(direction="vertical", p=hyp.flipud),
             RandomFlip(direction="horizontal", p=hyp.fliplr, flip_idx=flip_idx),
+            LetterBox(new_shape=(512, 1024), auto=False, scaleFill=True, scaleup=True, stride=32),
         ]
     )  # transforms
 

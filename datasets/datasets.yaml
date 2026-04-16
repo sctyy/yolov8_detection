@@ -8,10 +8,10 @@
 #     └── coco8  ← downloads here (1 MB)
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: /mnt/d/疵点数据库/标注疵点/data # dataset root dir
-train: /mnt/d/疵点数据库/标注疵点/data/train.txt # train images (relative to 'path') 4 images
-val: /mnt/d/疵点数据库/标注疵点/data/test.txt # val images (relative to 'path') 4 images
-test: /mnt/d/疵点数据库/标注疵点/data/test.txt   # test images (optional)
+path: /mnt/d/数据集/疵点数据库/标注疵点/data # dataset root dir
+train: /mnt/d/数据集/疵点数据库/标注疵点/data/train.txt # train images (relative to 'path') 4 images
+val: /mnt/d/数据集/疵点数据库/标注疵点/data/test.txt # val images (relative to 'path') 4 images
+test: /mnt/d/数据集/疵点数据库/标注疵点/data/test.txt   # test images (optional)
 
 # Classes
 names:
